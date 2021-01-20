@@ -130,6 +130,12 @@ body {
   color: #b9b6d3;
 }
 
+@media (min-width: 1024px) {
+  .container .right .trial p {
+    margin: 15px 50px;
+  }
+}
+
 .container .right .trial span {
   font-weight: 500;
   color: white;
@@ -139,6 +145,12 @@ body {
   padding: 20px;
   background: white;
   border-radius: 8px;
+}
+
+@media (min-width: 1024px) {
+  .container .right .form {
+    padding: 40px;
+  }
 }
 
 .container .right .form .form-control {
@@ -222,13 +234,14 @@ body {
   -webkit-box-shadow: 0 5px 0 #249e69;
           box-shadow: 0 5px 0 #249e69;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   background: #38cc8c;
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -247,7 +260,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   color: #b9b6d3;
 }
 
