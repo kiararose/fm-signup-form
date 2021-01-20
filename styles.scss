@@ -1,0 +1,206 @@
+$primary-red: hsl(0, 100%, 74%);
+$primary-green: hsl(154, 59%, 51%);
+
+$accent-blue: hsl(248, 32%, 49%);
+
+$neutral-dark-blue: hsl(249, 10%, 26%);
+$netural-grayish-blue: hsl(246, 25%, 77%);
+
+$primary-font: 'Poppins', sans-serif;
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    font-family: $primary-font;
+
+    a { 
+        text-decoration: none;
+        font-weight: 600;
+        color: $accent-blue;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+body {
+    background: url("images/bg-intro-mobile.png");
+    background-color: $primary-red;
+    margin: auto;
+
+    @media (min-width:1024px) {
+        margin: 100px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .left { 
+        display: flex;
+        flex-direction: column;
+        font-family: $primary-font;
+        text-align: center;
+        padding: 20px;
+
+        @media (min-width: 1024px) {
+            width: 50%;
+            text-align: left;
+        }
+
+        h1 {
+            font-weight: 700;
+            color: white;
+        }
+
+        p {
+            font-weight: 500;
+            color: white;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 0 hsla(0, 44%, 59%, 0.685);
+
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
+
+        .trial {
+            background-color: $accent-blue;
+            border-radius: 10px;
+            font-family: $primary-font;
+            font-size: 16px;
+            margin: 0 0 30px 0;
+            box-shadow: 0 8px 0 hsla(0, 44%, 59%, 0.685);
+            
+            p {
+                text-align: center;
+                margin: 30px 50px;
+                color: $netural-grayish-blue;
+            }
+
+            span {
+                font-weight: 500;
+                color: white;
+            }
+        }
+
+        .form {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+
+            .form-control {
+                margin: 0 20px 20px 0;
+                position: relative;
+            }
+
+            .form-control > input {
+                border-radius: 8px;
+                width: 100%;
+                padding: 20px 10px;
+                border: 1px solid $netural-grayish-blue;
+                font-family: $primary-font;
+                font-weight: 600;
+                color: $neutral-dark-blue;
+            }
+
+            .form-control > input:focus {
+                outline: none;
+                border: 2px solid $netural-grayish-blue;
+            }
+
+            .form-control > input::placeholder {
+                font-weight: 600;
+            }
+
+            .form-control.success > input {
+                border-color: $primary-green;
+            }
+
+            .form-control.error > input {
+                border-color: $primary-red;
+            }
+
+            .form-control > i {
+                position: absolute;
+                top: 24px;
+                right: -2px;
+                visibility: hidden;
+            }
+
+            .form-control.success > i.fa-check-circle {
+                visibility: visible;
+                color: $primary-green;
+            }
+
+            .form-control.error > i.fa-exclamation-circle {
+                visibility: visible;
+                color: $primary-red;
+            }
+
+            .form-control > small {
+                position: absolute;
+                bottom: -18px;
+                left: 6px;
+                visibility: hidden;
+            }
+
+            .form-control.error > small {
+                visibility: visible;
+                color: $primary-red;
+                font-family: $primary-font;
+                font-size: 11px;
+            }
+
+            button {
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 5px 0 hsl(154, 63%, 38%);
+                width: 100%;
+                padding: 20px;
+                background: $primary-green;
+                color: white;
+                font-family: $primary-font;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px; 
+                cursor: pointer;
+            }
+
+            button:active {
+                box-shadow: 0 3px 0 hsl(154, 63%, 38%);
+                transform: translateY(4px);
+            }
+
+            button:focus {
+                outline: none;
+            }
+
+            p {
+                font-family: $primary-font;
+                font-weight: 400;
+                text-align: center;
+                font-size: 13px;
+                color: $netural-grayish-blue;
+            }
+
+            a {
+                font-weight: 600;
+                color: $primary-red;
+                text-decoration: none;
+            }
+        }
+    }
+}
