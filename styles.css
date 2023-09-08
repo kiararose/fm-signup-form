@@ -7,9 +7,14 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        height: 100vh;
+    }
 }
 
 .container {
@@ -256,7 +261,7 @@ body {
     text-decoration: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   footer {
     position: fixed;
     bottom: 0;
